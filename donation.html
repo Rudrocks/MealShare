@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Food Donation</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #0044cc;
+            padding: 1rem;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #0044cc;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Donate Form */
+        .donate-form {
+            background-color: white;
+            padding: 2rem;
+            margin: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .donate-form h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        form label {
+            display: block;
+            margin: 0.5rem 0;
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #0044cc;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0033aa;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            header nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .donate-form {
+                padding: 1rem;
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Make Donation Form -->
+    <section class="donate-form">
+        <h2>Make a Food Donation</h2>
+        <form action="/dn">
+            <label for="name">Your Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="food">Food to Donate:</label>
+            <textarea id="food" name="food" rows="5" required></textarea>
+
+            <label for="quantity">Quantity (optional):</label>
+            <input type="text" id="quantity" name="quantity">
+
+            <label for="location">Your Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <button type="submit" onclick="Al()">Submit Donation</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Global Food Donation | All Rights Reserved</p>
+    </footer>
+    <script>
+        function Al(){
+            alert("Donation Sent!");
+        }
+    </script>
+</body>
+</html>

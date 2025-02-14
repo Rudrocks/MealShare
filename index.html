@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Styles */
+        header {
+            background-color: #0044cc;
+            padding: 1rem;
+            animation: slideDown 1s ease-out;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #0044cc;
+            color: white;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-out 0.5s forwards;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-out 1s forwards;
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #ffd700;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeIn 2s ease-out 1.5s forwards;
+        }
+
+        .hero button:hover {
+            background-color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        /* Content Section Styles */
+        .content {
+            background-color: white;
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 2s ease-out 2s forwards;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-align: center;
+            animation: fadeIn 2s ease-out 2.5s forwards;
+        }
+
+        .content-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        .content-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .content-item img {
+            width: 40%;
+            border-radius: 8px;
+        }
+
+        .content-item .text {
+            width: 55%;
+            padding-left: 20px;
+        }
+
+        .content-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .content-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #0044cc;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .content-item {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content-item img {
+                width: 80%;
+                margin-bottom: 15px;
+            }
+
+            .content-item .text {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero button {
+                font-size: 1rem;
+                padding: 12px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Global Food Donation</h1>
+        <p>Helping those in need, one meal at a time.</p>
+        <button onclick="window.location.href='Signup.html'">Get Started</button>
+    </section>
+
+    <!-- Content Section with Image and Text Containers (Split Layout) -->
+    <section class="content">
+        <h2>How You Can Help</h2>
+        <form action="/">
+        <div class="content-item">
+            <img src="https://via.placeholder.com/300x200" alt="">
+            <div class="text">
+                <h3>Request Food Donation</h3>
+                <p>If you are in need, request a food donation today to help those in your community.</p>
+            </div>
+        </div>
+
+        <div class="content-item">
+            <img src="https://via.placeholder.com/300x200" alt="">
+            <div class="text">
+                <h3>Donate Food</h3>
+                <p>Share your excess food with others by donating to help feed the hungry.</p>
+            </div>
+        </div>
+
+        <div class="content-item">
+            <img src="https://via.placeholder.com/300x200" alt="">
+            <div class="text">
+                <h3>Become a Volunteer</h3>
+                <p>Join our network of volunteers to help distribute food and spread the love!</p>
+            </div>
+        </div>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Global Food Donation | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
